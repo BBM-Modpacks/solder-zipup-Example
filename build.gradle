@@ -2,7 +2,7 @@
 // START >> INIT
 // ------------------
 
-defaultTasks "voltzclient", "voltzserver", "voltzSolder-config", "voltzSolder-appeng", "voltzSolder-autoutils", "voltzSolder-ChickenChunks","voltzSolder-CodeChickenCore", "voltzSolder-ComeCloser", "voltzSolder-EnderIOr", "voltzSolder-EnderTanks", "voltzSolder-extrabiomesxl", "voltzSolder-extrautils", "voltzSolder-Galacticraft", "voltzSolder-Galacticraft-Planets" ,"voltzSolder-ICBM", "voltzSolder-InventoryTweaks", "voltzSolder-ironchest", "voltzSolder-MadScience", "voltzSolder-Minechem", "voltzSolder-MineFactoryReloaded", "voltzSolder-MFFS", "voltzSolder-MPS", "voltzSolder-neiaddons", "voltzSolder-NEIPlugins", "voltzSolder-NEI", "voltzSolder-OpenEye", "voltzSolder-PowerCrystalsCore", "voltzSolder-mpsaddons", "voltzSolder-Railcraft", "voltzSolder-RE", "voltzSolder-secretrooms", "voltzSolder-shetiphiancore", "voltzSolder-SmoothBedrock", "voltzSolder-ThermalExpansion", "voltzSolder-UE", "voltzSolder-Waila", "voltzSolder-wrcbe", "voltzSolder-armorstatushud", "voltzSolder-custombranding", "voltzSolder-noVoidFogNoDimming", "voltzSolder-zansminimap", "voltzSolder-RI", "voltzSolder-SolderSolder"
+defaultTasks "client", "server", "Solder-config", "Solder-appeng", "Solder-autoutils", "Solder-ChickenChunks","Solder-CodeChickenCore", "Solder-ComeCloser", "Solder-EnderIOr", "Solder-EnderTanks", "Solder-extrabiomesxl", "Solder-extrautils", "Solder-Galacticraft", "Solder-Galacticraft-Planets" ,"Solder-ICBM", "Solder-InventoryTweaks", "Solder-ironchest", "Solder-MadScience", "Solder-Minechem", "Solder-MineFactoryReloaded", "Solder-MFFS", "Solder-MPS", "Solder-neiaddons", "Solder-NEIPlugins", "Solder-NEI", "Solder-OpenEye", "Solder-PowerCrystalsCore", "Solder-mpsaddons", "Solder-Railcraft", "Solder-RE", "Solder-secretrooms", "Solder-shetiphiancore", "Solder-SmoothBedrock", "Solder-ThermalExpansion", "Solder-UE", "Solder-Waila", "Solder-wrcbe", "Solder-armorstatushud", "Solder-custombranding", "Solder-noVoidFogNoDimming", "Solder-zansminimap", "Solder-RI", "Solder-appeng2", "Solder-AdvancedSP", "Solder-SolderSolder"
 
 ext.buildProps = file "build.properties"
 
@@ -25,12 +25,12 @@ wrapper {
 }
 
 // ------------------
-// START >> VOLTZ CLIENT
+// START >>   CLIENT
 // ------------------
 
-task("voltzclient", type: Zip) {
+task("client", type: Zip) {
     group = 'modpack'
-    description = 'Builds a Voltz client modpack zip'
+    description = 'Builds a   client modpack zip'
 
     // Grab all the files that make up a client installation.
     from('.')
@@ -73,17 +73,17 @@ task("voltzclient", type: Zip) {
     baseName = "./output/${config.archivesBaseName}-$pack_version-client"
 
     // Logging is always important.
-	doLast { logger.lifecycle "Voltz Client Created: $archivePath" }
+	doLast { logger.lifecycle "  Client Created: $archivePath" }
 }
 
 // ------------------
-// START >> VOLTZ SERVER
+// START >>   SERVER
 // ------------------
 
-task("voltzserver", type: Zip)
+task("server", type: Zip)
 {
     group = 'modpack'
-    description = 'Builds a Voltz server modpack zip'
+    description = 'Builds a   server modpack zip'
 
     // Grab all the files that makeup a server installation.
     from('.')
@@ -117,14 +117,14 @@ task("voltzserver", type: Zip)
     baseName = "./output/${config.archivesBaseName}-$pack_version-server"
 
     // Logging is always important.
-    doLast { logger.lifecycle "Voltz Server Created: $archivePath" }
+    doLast { logger.lifecycle "  Server Created: $archivePath" }
 }
 
-task("voltzSolder-config", type: Zip)
+task("Solder-config", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -139,11 +139,11 @@ task("voltzSolder-config", type: Zip)
     baseName = "./output/z-${config.archivesBaseName}-configs-v$pack_version"
 }
 
-task("voltzSolder-appeng", type: Zip)
+task("Solder-appeng", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -157,11 +157,11 @@ task("voltzSolder-appeng", type: Zip)
     baseName = "./output/Technic-solder/applied-energistics/applied-energistics-v${config.appeng}-${config.minecraft_version}"
 }
 
-task("voltzSolder-autoutils", type: Zip)
+task("Solder-autoutils", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -174,11 +174,11 @@ task("voltzSolder-autoutils", type: Zip)
     
     baseName = "./output/Technic-solder/autoutils/autoutils-v$pack_version-${config.minecraft_version}"
 }
-task("voltzSolder-SolderSolder", type: Zip)
+task("Solder-SolderSolder", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     
     // Grab all the files that makeup a server installation.
     from('.')
@@ -192,11 +192,11 @@ task("voltzSolder-SolderSolder", type: Zip)
     
     baseName = "./output/Technic-solder-v$pack_version-${config.minecraft_version}"
 }
-task("voltzSolder-ChickenChunks", type: Zip)
+task("Solder-ChickenChunks", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -210,11 +210,11 @@ task("voltzSolder-ChickenChunks", type: Zip)
     baseName = "./output/Technic-solder/chickenchunks/chickenchunks-v${config.CChunks}-${config.minecraft_version}"
 }
 
-task("voltzSolder-CodeChickenCore", type: Zip)
+task("Solder-CodeChickenCore", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -228,11 +228,11 @@ task("voltzSolder-CodeChickenCore", type: Zip)
     baseName = "./output/Technic-solder/codechickencore/codechickencore-v${config.CodeCCore}-${config.minecraft_version}"
 }
 
-task("voltzSolder-ComeCloser", type: Zip)
+task("Solder-ComeCloser", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -246,11 +246,11 @@ task("voltzSolder-ComeCloser", type: Zip)
     baseName = "./output/Technic-solder/comecloser/comecloser-v${config.ComeCLoser}-${config.minecraft_version}"
 }
 
-task("voltzSolder-EnderIOr", type: Zip)
+task("Solder-EnderIOr", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -264,11 +264,11 @@ task("voltzSolder-EnderIOr", type: Zip)
     baseName = "./output/Technic-solder/ender-io/ender-io-v${config.EnderIO}-${config.minecraft_version}"
 }
 
-task("voltzSolder-EnderTanks", type: Zip)
+task("Solder-EnderTanks", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -282,11 +282,11 @@ task("voltzSolder-EnderTanks", type: Zip)
     baseName = "./output/Technic-solder/endertanks/endertanks-v${config.cendertanks}-${config.minecraft_version}"
 }
 
-task("voltzSolder-extrabiomesxl", type: Zip)
+task("Solder-extrabiomesxl", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -300,11 +300,11 @@ task("voltzSolder-extrabiomesxl", type: Zip)
     baseName = "./output/Technic-solder/extrabiomesxl/extrabiomesxl-v${config.extrabiomesxl}-${config.minecraft_version}"
 }
 
-task("voltzSolder-extrautils", type: Zip)
+task("Solder-extrautils", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -318,11 +318,11 @@ task("voltzSolder-extrautils", type: Zip)
     baseName = "./output/Technic-solder/extrautils/extrautils-v$pack_version-${config.minecraft_version}"
 }
 
-task("voltzSolder-Galacticraft", type: Zip)
+task("Solder-Galacticraft", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -336,11 +336,11 @@ task("voltzSolder-Galacticraft", type: Zip)
     baseName = "./output/Technic-solder/galacticraft/galacticraft-v${config.Galacticraft}-${config.minecraft_version}"
 }
 
-task("voltzSolder-Galacticraft-Planets", type: Zip)
+task("Solder-Galacticraft-Planets", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -354,11 +354,11 @@ task("voltzSolder-Galacticraft-Planets", type: Zip)
     baseName = "./output/Technic-solder/galacticraft-planets/galacticraft-planets-v${config.GalacticraftPlanets}-${config.minecraft_version}"
 }
 
-task("voltzSolder-ICBM", type: Zip)
+task("Solder-ICBM", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -372,11 +372,11 @@ task("voltzSolder-ICBM", type: Zip)
     baseName = "./output/Technic-solder/ue-icbm/ue-icbm-v${config.ICBM}-${config.minecraft_version}"
 }
 
-task("voltzSolder-InventoryTweaks", type: Zip)
+task("Solder-InventoryTweaks", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -390,11 +390,11 @@ task("voltzSolder-InventoryTweaks", type: Zip)
     baseName = "./output/Technic-solder/inventorytweaks/inventorytweaks-v${config.InvTweeks}-${config.minecraft_version}"
 }
 
-task("voltzSolder-ironchest", type: Zip)
+task("Solder-ironchest", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -408,11 +408,11 @@ task("voltzSolder-ironchest", type: Zip)
     baseName = "./output/Technic-solder/ironchests/ironchests-v${config.ironchests}-${config.minecraft_version}"
 }
 
-task("voltzSolder-MadScience", type: Zip)
+task("Solder-MadScience", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -426,11 +426,11 @@ task("voltzSolder-MadScience", type: Zip)
     baseName = "./output/Technic-solder/madscience/madscience-v${config.MadScience}-${config.minecraft_version}"
 }
 
-task("voltzSolder-Minechem", type: Zip)
+task("Solder-Minechem", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -444,11 +444,11 @@ task("voltzSolder-Minechem", type: Zip)
     baseName = "./output/Technic-solder/minechem/minechem-v${config.minechem}-${config.minecraft_version}"
 }
 
-task("voltzSolder-MineFactoryReloaded", type: Zip)
+task("Solder-MineFactoryReloaded", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -462,11 +462,11 @@ task("voltzSolder-MineFactoryReloaded", type: Zip)
     baseName = "./output/Technic-solder/mfr/mfr-v${config.MFR}-${config.minecraft_version}"
 }
 
-task("voltzSolder-MFFS", type: Zip)
+task("Solder-MFFS", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -480,11 +480,11 @@ task("voltzSolder-MFFS", type: Zip)
     baseName = "./output/Technic-solder/calc-mffs/calc-mffs-v${config.calcmffs}-${config.minecraft_version}"
 }
 
-task("voltzSolder-MPS", type: Zip)
+task("Solder-MPS", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -500,11 +500,11 @@ task("voltzSolder-MPS", type: Zip)
     baseName = "./output/Technic-solder/ue-mps/ue-mps-v${config.mps}-${config.minecraft_version}"
 }
 
-task("voltzSolder-neiaddons", type: Zip)
+task("Solder-neiaddons", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -518,11 +518,11 @@ task("voltzSolder-neiaddons", type: Zip)
     baseName = "./output/Technic-solder/nei-addons/nei-addons-v${config.neiaddons}-${config.minecraft_version}"
 }
 
-task("voltzSolder-NEIPlugins", type: Zip)
+task("Solder-NEIPlugins", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -536,11 +536,11 @@ task("voltzSolder-NEIPlugins", type: Zip)
     baseName = "./output/Technic-solder/nei-plugin/nei-plugin-v${config.neiplugins}-${config.minecraft_version}"
 }
 
-task("voltzSolder-NEI", type: Zip)
+task("Solder-NEI", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -554,11 +554,11 @@ task("voltzSolder-NEI", type: Zip)
     baseName = "./output/Technic-solder/nei/nei-v${config.NEI}-${config.minecraft_version}"
 }
 
-task("voltzSolder-OpenComputers", type: Zip)
+task("Solder-OpenComputers", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -572,11 +572,11 @@ task("voltzSolder-OpenComputers", type: Zip)
     baseName = "./output/Technic-solder/opencomputers/opencomputers-v${config.OC}-${config.minecraft_version}"
 }
 
-task("voltzSolder-OpenEye", type: Zip)
+task("Solder-OpenEye", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -590,11 +590,11 @@ task("voltzSolder-OpenEye", type: Zip)
     baseName = "./output/Technic-solder/openeye/openeye-v${config.OpenEye}-${config.minecraft_version}"
 }
 
-task("voltzSolder-PowerCrystalsCore", type: Zip)
+task("Solder-PowerCrystalsCore", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -608,11 +608,11 @@ task("voltzSolder-PowerCrystalsCore", type: Zip)
     baseName = "./output/Technic-solder/powercrystalscore/powercrystalscore-v${config.PowerCC}-${config.minecraft_version}"
 }
 
-task("voltzSolder-mpsaddons", type: Zip)
+task("Solder-mpsaddons", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -626,11 +626,11 @@ task("voltzSolder-mpsaddons", type: Zip)
     baseName = "./output/Technic-solder/mpsaddons/mpsaddons-v${config.MPSAddons}-${config.minecraft_version}"
 }
 
-task("voltzSolder-Railcraft", type: Zip)
+task("Solder-Railcraft", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -644,11 +644,11 @@ task("voltzSolder-Railcraft", type: Zip)
     baseName = "./output/Technic-solder/rc/rc-v${config.Railcraft}-${config.minecraft_version}"
 }
 
-task("voltzSolder-RE", type: Zip)
+task("Solder-RE", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -662,11 +662,11 @@ task("voltzSolder-RE", type: Zip)
     baseName = "./output/Technic-solder/re/re-v${config.ResonantEngine}-${config.minecraft_version}"
 }
 
-task("voltzSolder-secretrooms", type: Zip)
+task("Solder-secretrooms", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -680,11 +680,11 @@ task("voltzSolder-secretrooms", type: Zip)
     baseName = "./output/Technic-solder/secretrooms/secretrooms-v${config.secretrooms}-${config.minecraft_version}"
 }
 
-task("voltzSolder-shetiphiancore", type: Zip)
+task("Solder-shetiphiancore", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -698,11 +698,11 @@ task("voltzSolder-shetiphiancore", type: Zip)
     baseName = "./output/Technic-solder/shetiphiancore/shetiphiancore-v${config.shetiphiancore}-${config.minecraft_version}"
 }
 
-task("voltzSolder-SmoothBedrock", type: Zip)
+task("Solder-SmoothBedrock", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -716,11 +716,11 @@ task("voltzSolder-SmoothBedrock", type: Zip)
     baseName = "./output/Technic-solder/smoothbedrock/smoothbedrock-v${config.smoothbedrock}-${config.minecraft_version}"
 }
 
-task("voltzSolder-ThermalExpansion", type: Zip)
+task("Solder-ThermalExpansion", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -734,11 +734,11 @@ task("voltzSolder-ThermalExpansion", type: Zip)
     baseName = "./output/Technic-solder/thermalexpansion/thermalexpansion-v${config.ThermalE}-${config.minecraft_version}"
 }
 
-task("voltzSolder-UE", type: Zip)
+task("Solder-UE", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -752,11 +752,11 @@ task("voltzSolder-UE", type: Zip)
     baseName = "./output/Technic-solder/ue-core/ue-core-v${config.UE}-${config.minecraft_version}"
 }
 
-task("voltzSolder-Waila", type: Zip)
+task("Solder-Waila", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -769,11 +769,11 @@ task("voltzSolder-Waila", type: Zip)
     
     baseName = "./output/Technic-solder/waila/waila-v${config.waila}-${config.minecraft_version}"
 }
-task("voltzSolder-wrcbe", type: Zip)
+task("Solder-wrcbe", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -787,11 +787,11 @@ task("voltzSolder-wrcbe", type: Zip)
     baseName = "./output/Technic-solder/wrcbe/wrcbe-v${config.wrcbe}-${config.minecraft_version}"
 }
 
-task("voltzSolder-armorstatushud", type: Zip)
+task("Solder-armorstatushud", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -805,11 +805,11 @@ task("voltzSolder-armorstatushud", type: Zip)
     baseName = "./output/Technic-solder/armorstatushud/armorstatushud-v${config.armorstatushud}-${config.minecraft_version}"
 }
 
-task("voltzSolder-custombranding", type: Zip)
+task("Solder-custombranding", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -823,11 +823,11 @@ task("voltzSolder-custombranding", type: Zip)
     baseName = "./output/Technic-solder/custombranding/custombranding-v${config.custombranding}-${config.minecraft_version}"
 }
 
-task("voltzSolder-noVoidFogNoDimming", type: Zip)
+task("Solder-noVoidFogNoDimming", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -841,11 +841,11 @@ task("voltzSolder-noVoidFogNoDimming", type: Zip)
     baseName = "./output/Technic-solder/novoidfog/novoidfog-${config.minecraft_version}"
 }
 
-task("voltzSolder-zansminimap", type: Zip)
+task("Solder-zansminimap", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -859,11 +859,11 @@ task("voltzSolder-zansminimap", type: Zip)
     baseName = "./output/Technic-solder/zansminimap/zansminimap-${config.minecraft_version}"
 }
 
-task("voltzSolder-RI", type: Zip)
+task("Solder-RI", type: Zip)
 {
 
     group = 'modpack'
-    description = 'Builds a Voltz Solder modpack zip'
+    description = 'Builds a   Solder modpack zip'
     // Grab all the files that makeup a server installation.
     from('.')
 	{
@@ -875,4 +875,76 @@ task("voltzSolder-RI", type: Zip)
     eachFile { file -> logger.lifecycle "packing $file" }
     
     baseName = "./output/Technic-solder/ue-resonantinduction/ue-resonantinduction-${config.UERI}-${config.minecraft_version}"
+}
+
+task("Solder-appeng2", type: Zip)
+{
+
+    group = 'modpack'
+    description = 'Builds a   Solder modpack zip'
+    // Grab all the files that makeup a server installation.
+    from('.')
+	{
+
+        include 'mods/appliedenergistics2-*.jar'
+    }	
+    
+    // Print out each file that we package into the mod pack.
+    eachFile { file -> logger.lifecycle "packing $file" }
+    
+    baseName = "./output/Technic-solder/applied-energistics/applied-energistics-v${config.appeng}-${config.minecraft_version}"
+}
+
+task("Solder-appeng2", type: Zip)
+{
+
+    group = 'modpack'
+    description = 'Builds a   Solder modpack zip'
+    // Grab all the files that makeup a server installation.
+    from('.')
+	{
+
+        include 'mods/advancedgenetics-*.jar'
+    }	
+    
+    // Print out each file that we package into the mod pack.
+    eachFile { file -> logger.lifecycle "packing $file" }
+    
+    baseName = "./output/Technic-solder/applied-energistics/applied-energistics-v${config.AE2}-${config.minecraft_version}"
+}
+
+task("Solder-AdvancedSP", type: Zip)
+{
+
+    group = 'modpack'
+    description = 'Builds a   Solder modpack zip'
+    // Grab all the files that makeup a server installation.
+    from('.')
+	{
+
+        include 'mods/AdvancedSolarPanel-*.jar'
+    }	
+    
+    // Print out each file that we package into the mod pack.
+    eachFile { file -> logger.lifecycle "packing $file" }
+    
+    baseName = "./output/Technic-solder/applied-energistics/applied-energistics-v${config.AdvancedSP}-${config.minecraft_version}"
+}
+
+task("Solder-AdvancedSP", type: Zip)
+{
+
+    group = 'modpack'
+    description = 'Builds a   Solder modpack zip'
+    // Grab all the files that makeup a server installation.
+    from('.')
+	{
+
+        include 'mods/AdvancedSolarPanel-*.jar'
+    }	
+    
+    // Print out each file that we package into the mod pack.
+    eachFile { file -> logger.lifecycle "packing $file" }
+    
+    baseName = "./output/Technic-solder/applied-energistics/applied-energistics-v${config.AdvancedSP}-${config.minecraft_version}"
 }
